@@ -1,0 +1,71 @@
+{
+  "name": "@stars-in-the-sky-42/dsh-mp-fetch",
+  "version": "1.0.2",
+  "description": "Materials Project 查询插件：按化学式/MP ID/化学体系取空间群与物性，按空间群+体系做普查筛选，并支持在对话中维护使用习惯。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "mp.js",
+    "fields.js",
+    "key-store.js",
+    "settings-route.js",
+    "settings-store.js",
+    "paths.js",
+    "credentials.js",
+    "habits.js",
+    "default-habits.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "docs/*.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "materials-project",
+    "materials-science"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "scripts": {
+    "check": "node --check index.js && node --check client.js && node --check mp.js",
+    "selftest": "node selftest.mjs",
+    "test:client": "node test-client.mjs",
+    "verify:package": "node scripts/verify-package.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stars-in-the-sky-42/dsh-mp-fetch.git"
+  },
+  "homepage": "https://github.com/stars-in-the-sky-42/dsh-mp-fetch",
+  "bugs": {
+    "url": "https://github.com/stars-in-the-sky-42/dsh-mp-fetch/issues"
+  }
+}

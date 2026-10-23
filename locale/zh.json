@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "材料数据（Materials Project）",
+    "description": "按化学式/MP ID/化学体系取空间群与物性，按空间群+体系做普查筛选，并支持在对话中维护使用习惯。"
+  }
+}
