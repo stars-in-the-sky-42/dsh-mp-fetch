@@ -44,6 +44,7 @@ D:\path\to\dsh-mp-fetch
 ### 2. 用命令行安装
 
 ```bash
+# 开发者注：npm包暂未发布，暂时只支持后两种方案
 dsh plugin --profile desktop add @stars-in-the-sky-42/dsh-mp-fetch
 # 或
 dsh plugin --profile desktop add https://github.com/stars-in-the-sky-42/dsh-mp-fetch
